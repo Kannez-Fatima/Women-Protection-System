@@ -220,6 +220,77 @@ transform:scale(1);
 opacity:1;
 }
 }
+/* Universal Responsive + Vertical Scroll */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    width:100%;
+    min-height:100vh;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+/* Responsive Images */
+img{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+/* Responsive Containers */
+.container,
+.card,
+.login-card,
+.signup-card{
+    width:min(90%,500px);
+    margin:auto;
+}
+
+/* Mobile Devices */
+@media (max-width:768px){
+
+    .container,
+    .card,
+    .login-card,
+    .signup-card{
+        width:95%;
+        padding:20px;
+    }
+
+    h1{
+        font-size:1.8rem;
+    }
+
+    h2{
+        font-size:1.5rem;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width:480px){
+
+    .container,
+    .card,
+    .login-card,
+    .signup-card{
+        width:98%;
+        padding:15px;
+    }
+
+    input,
+    button{
+        width:100%;
+    }
+}
 
 </style>
 </head>
@@ -228,7 +299,7 @@ opacity:1;
 
 <!-- BACKGROUND -->
 
-<div class="bg">
+<div class="bg" class="min-h-screen overflow-y-auto overflow-x-hidden">
 
 <div class="ball"></div>
 <div class="ball"></div>
